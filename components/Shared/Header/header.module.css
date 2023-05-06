@@ -1,0 +1,59 @@
+.nav {
+    height: 5em;
+}
+
+@media (max-width: 767px) {
+    .nav {
+        height: 4em;
+    }
+}
+
+.navContainer{
+    max-width: 90%;
+    padding: 1em;
+}
+
+.navLink{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.05rem;
+}    
+
+@media (max-width: 768px) {
+    .navLink {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+
+.navLink:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+    .logo{
+        width: 60%;
+    }
+}
+
+.getStarted {
+    padding: 6%;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+  }
+  
+  @media (max-width: 767px) {
+    .getStarted {
+      border-radius: 2px;
+    }
+  }
+
+.getStarted:hover{
+    color: white;
+}
