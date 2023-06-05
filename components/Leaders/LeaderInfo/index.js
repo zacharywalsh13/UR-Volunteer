@@ -44,7 +44,7 @@ export default function Leaders() {
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {people.map((person, index) => (
           <div key={index} className="bg-white p-4 rounded shadow">
-            <img className="w-full h-56 object-cover rounded mb-6" src={person.imageUrl} alt={person.name} />
+            <img className="w-full h-56 object-cover rounded mb-6" src="/Images/headshot-2.jpg" alt={person.name} />
             <h3 className="text-xl font-bold">{person.name}</h3>
             <h5 className="mb-4 font-light	">{person.subtitle}</h5>
             <p className="text-gray-600">{person.description}</p>

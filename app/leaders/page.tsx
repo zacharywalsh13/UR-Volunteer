@@ -6,10 +6,9 @@ import LeaderInfo from "../../components/Leaders/LeaderInfo/index.js"
 export default function Leaders() {
   return (
     <>
-      <DefaultLayout>
         <LandingImage />
-        <LeaderInfo />
-      </DefaultLayout>
+        {/* <LeaderInfo /> */}
     </>
-  )
+  ) 
+  
 }
