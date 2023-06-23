@@ -1,7 +1,10 @@
+import InfoBlock from "@/components/Resources/Info Block/infoBlock"
+import LandingImage from "@/components/Resources/Landing Image /page"
 export default function Resources() {
     return(
-        <div>
-            <h1>Resources</h1>
+        <div p-10>
+            <LandingImage />
+            <InfoBlock />
         </div>
     )
 }

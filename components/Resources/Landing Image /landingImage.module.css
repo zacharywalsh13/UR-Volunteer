@@ -1,0 +1,29 @@
+.resources{
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resourceImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.resourceImgText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 6em;
+    font-weight: 900;
+}
+
+.Image {
+    width: 80%
+    
+}
+

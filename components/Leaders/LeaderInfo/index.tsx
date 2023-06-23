@@ -1,7 +1,5 @@
 "use client";
 
-import "tailwindcss/tailwind.css";
-
 import React, { useState, useEffect } from "react";
 import { client } from "../../../sanity/lib/client";
 
