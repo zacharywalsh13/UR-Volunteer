@@ -1,6 +1,6 @@
 export default {
-    name: 'leader',
-    title: 'Leaders',
+    name: 'leaderSundayAM',
+    title: 'Leaders - Sunday AM',
     type: 'document',
     fields: [
       {

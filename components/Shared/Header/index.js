@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import style from "./header.module.css";
+import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Header() {
   return (

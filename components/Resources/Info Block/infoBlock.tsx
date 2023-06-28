@@ -1,54 +1,54 @@
-"use client";
-
+"use client"
+// Import Sanity client and React hooks
 import React, { useState, useEffect } from "react";
-
 import { client } from "../../../sanity/lib/client";
+import "tailwindcss/tailwind.css";
 
-import styles from "./infoBlock.module.css";
-
+// Define a type for a resource block
 type resourceBlock = {
   title: string;
   subtitle: string;
   description: string;
 };
 
+// InfoBlock component
 export default function InfoBlock() {
+  // Using useState hook to handle resourceBlockData
   const [resourceBlockData, setResourceBlockData] = useState<
     resourceBlock[] | null
   >(null);
 
+  // Using useEffect hook to fetch data when component is mounted
   useEffect(() => {
+    // Fetch data from sanity
     client
       .fetch('*[_type == "resourceBlock"]{title, subtitle, description}')
-      .then((data: resourceBlock[]) => setResourceBlockData(data))
-      .catch(console.error);
+      .then((data: resourceBlock[]) => setResourceBlockData(data)) // Update state with fetched data
+      .catch(console.error); // Log any errors
   }, []);
 
+  // Render the component
   return (
-    <div className={`bg-gray-50 rounded ${styles.infoBlock}`}>
+    <div className="pt-10 pl-4 pr-4">
+      {/* Loop through resourceBlockData and render each block */}
       {resourceBlockData &&
         resourceBlockData.map((resourceBlock, index) => (
-
-          <div key={index}>
-
-            <div className="bg-gray-50 rounded">
-
-            <div className="flex flex-col items-center justify-center">
-              <h1>{resourceBlock.title}</h1>
+          <div key={index} className="bg-gray-100 rounded-xl mb-4 p-4">
+            <div className="">
+              <div className="flex flex-col justify-left">
+                <h1 className="text-3xl">{resourceBlock.title}</h1>{" "}
+                {/* Render the title */}
+              </div>
+              <div className="flex flex-col justify-left">
+                <h2 className="text-lg">{resourceBlock.subtitle}</h2>{" "}
+                {/* Render the subtitle */}
+              </div>
+              <div className="flex flex-col justify-left">
+                <p className="text-md">{resourceBlock.description}</p>{" "}
+                {/* Render the description */}
+              </div>
             </div>
-
-            <div className="flex flex-col items-center justify-center">
-              <h2>{resourceBlock.subtitle}</h2>
-            </div>
-
-            <div className="flex flex-col items-center justify-center">
-              <p>{resourceBlock.description}</p>
-            </div>
-
-            </div>
-
           </div>
-
         ))}
     </div>
   );
